@@ -1,0 +1,295 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: #eef1f6;
+    color: #333;
+    padding: 25px 15px;
+    transition: 0.3s;
+}
+
+/* Action Buttons */
+.actions {
+    max-width: 950px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.actions button {
+    padding: 11px 17px;
+    background: #6842a5;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.actions button:hover {
+    background: #452578;
+    transform: translateY(-2px);
+}
+
+/* Resume Container */
+.resume {
+    max-width: 950px;
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 35px;
+    background: linear-gradient(135deg, #6842a5, #8c65c4);
+    color: white;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    border-radius: 50%;
+    background: white;
+    color: #6842a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.header-info h1 {
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+.header-info h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.header-info p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Main Layout */
+.content {
+    display: grid;
+    grid-template-columns: 34% 66%;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #f4f1fa;
+    padding: 30px 25px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 30px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 28px;
+}
+
+section h2 {
+    font-size: 19px;
+    color: #6842a5;
+    border-bottom: 2px solid #ddd3ef;
+    padding-bottom: 9px;
+    margin-bottom: 16px;
+}
+
+section p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+section li {
+    font-size: 14px;
+    margin-bottom: 9px;
+    line-height: 1.5;
+}
+
+.sidebar a {
+    color: #6842a5;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Project and Education Items */
+.item {
+    margin-bottom: 22px;
+    padding-left: 14px;
+    border-left: 3px solid #8c65c4;
+}
+
+.item h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.item span {
+    display: inline-block;
+    color: #6842a5;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 18px;
+    background: #6842a5;
+    color: white;
+    font-size: 13px;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #141e30;
+    color: #eee;
+}
+
+body.dark .resume {
+    background: #202938;
+}
+
+body.dark .sidebar {
+    background: #293448;
+}
+
+body.dark .item h3 {
+    color: white;
+}
+
+body.dark section p {
+    color: #ddd;
+}
+
+body.dark section h2 {
+    color: #c4a5ff;
+    border-color: #49556b;
+}
+
+body.dark .item span,
+body.dark .sidebar a {
+    color: #c4a5ff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 700px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 15px;
+    }
+
+    .header-info h1 {
+        font-size: 23px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar,
+    .main-content {
+        padding: 23px;
+    }
+
+    .actions {
+        justify-content: center;
+    }
+
+    .actions button {
+        font-size: 12px;
+    }
+}
+
+/* Print / PDF */
+@media print {
+
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    body {
+        background: white;
+        padding: 0;
+        color: black;
+    }
+
+    .actions {
+        display: none;
+    }
+
+    .resume {
+        box-shadow: none;
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .header {
+        background: #6842a5 !important;
+        color: white !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .sidebar {
+        background: #f4f1fa !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    footer {
+        background: #6842a5 !important;
+        color: white !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    section,
+    .item {
+        break-inside: avoid;
+    }
+}
