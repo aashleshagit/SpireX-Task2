@@ -20,15 +20,20 @@ A clean and responsive personal CV/Resume webpage developed using HTML, CSS, and
 - CSS3
 - JavaScript
 
+
 ## Project Structure
 
+```text
 Simple-CV-Resume-Card/
 │
 ├── index.html
 ├── style.css
 ├── script.js
 ├── README.md
+│
 └── screenshots/
+```
+
 
 ## How to Run
 1. Download or clone the repository.
