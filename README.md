@@ -20,6 +20,16 @@ A clean and responsive personal CV/Resume webpage developed using HTML, CSS, and
 - CSS3
 - JavaScript
 
+## Output Screenshots
+
+### Desktop View
+![Desktop View](screenshots/desktop-view2.png)
+
+### Mobile View
+![Mobile View](screenshots/mobile-view2.png)
+
+### Dark Mode
+![Dark Mode](screenshots/dark-mode2.png)
 
 ## Project Structure
 
